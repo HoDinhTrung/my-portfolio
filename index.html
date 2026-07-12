@@ -3,55 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ho Dinh Trung — Business Analyst Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">My Portfolio</div>
+    <!-- Sticky Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">H.D.T</a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#hero">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section id="hero" class="hero">
-            <h1>Hello, I'm a Developer</h1>
-            <p>Welcome to my static portfolio page.</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </section>
-
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>I am passionate about creating beautiful and functional web applications.</p>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>A description of my first project.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>A description of my second project.</p>
+    <main class="bento-container">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="bento-card hero-card">
+            <div class="hero-content">
+                <span class="mono-label">PORTFOLIO</span>
+                <h1 class="hero-name">Ho Dinh Trung</h1>
+                <p class="hero-title">Business Analyst</p>
+                <p class="hero-summary">
+                    I specialize in bridging the gap between complex business challenges and efficient technical architectures. With experience in Shopify integrations, TikTok Shop automation, and telemetry analytics, I design systems that translate requirements into measurable business outcomes.
+                </p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary" download>Download CV</a>
+                    <a href="https://github.com/HoDinhTrung" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with me at myemail@example.com</p>
+        <!-- Main Bento Grid -->
+        <div class="bento-grid-2col">
+            
+            <!-- Experience Card (2/3 width in desktop via grid config) -->
+            <section id="experience" class="bento-card card-experience">
+                <span class="mono-label">TIMELINE</span>
+                <h2>Professional Experience</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-period">2024 — Present</span>
+                            <span class="timeline-company">E-Commerce Tech Solutions</span>
+                        </div>
+                        <div class="timeline-details">
+                            <h3 class="timeline-role">Lead Business Analyst</h3>
+                            <p>Directing technical requirements for inventory automation, multi-channel Shopify deployments, and TikTok Shop catalog synchronizations. Mapped and maintained complex REST/GraphQL API specifications between legacy ERP and public endpoints.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-period">2022 — 2024</span>
+                            <span class="timeline-company">DataFlow Analytics Corp</span>
+                        </div>
+                        <div class="timeline-details">
+                            <h3 class="timeline-role">Junior Business Analyst / Data Specialist</h3>
+                            <p>Spearheaded system-requirement gathering for heatmaps and web-tracking telemetry software. Translated abstract client performance goals into database schemas, product backlog items, and dashboard mockups.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education & Languages Card (1/3 width) -->
+            <section id="education" class="bento-card card-education">
+                <span class="mono-label">ACADEMICS</span>
+                <h2>Education</h2>
+                
+                <div class="edu-item">
+                    <h3>Bachelor of Information Systems</h3>
+                    <p class="edu-school">University of Science</p>
+                    <p class="edu-year">Graduated 2023</p>
+                </div>
+                
+                <hr class="card-divider">
+                
+                <span class="mono-label">LANGUAGES</span>
+                <div class="language-score">
+                    <h3>TOEIC Certificate</h3>
+                    <p class="score-badge">850 / 990</p>
+                    <p class="score-desc">Professional Working Proficiency</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Featured Projects (Full Width Bento Card) -->
+        <section id="projects" class="bento-card card-projects">
+            <span class="mono-label">WORK DIRECTORY</span>
+            <h2>Featured Projects</h2>
+            
+            <div class="accordion-group">
+                
+                <!-- Project 1: Heatmap Analytics (Open) -->
+                <details class="project-accordion" open>
+                    <summary class="accordion-header">
+                        <span class="accordion-title">Heatmap Analytics</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>A custom click, hover, and scroll tracking system designed to collect, process, and map web visitor telemetry for conversion rate optimization.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>Lead BA. Translated tracking needs into detailed event-driven data specifications, managed database schema design requirements, and wrote user stories.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Mitigated website load-time overhead caused by continuous event listeners by introducing buffered event queueing and compression logic on client scripts.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Implemented tracking with less than 15ms latency overhead, resulting in 98.4% data capturing efficiency while reducing server payload costs by 40%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 2: Shopify Integration (Open) -->
+                <details class="project-accordion" open>
+                    <summary class="accordion-header">
+                        <span class="accordion-title">Shopify Integration Engine</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>Automated inventory and order flow synchronizer connecting on-premise ERP platforms with high-volume Shopify storefronts.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>Systems Analyst. Mapped API payloads, configured payload translation rules, and wrote specifications for transactional fallback mechanisms.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Addressed API rate-limit errors by engineering dynamic API call throttle controls based on headers, avoiding catalog sync delays.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Achieved near real-time catalog matching with a 99.9% sync success rate, preventing order cancellations due to database lag.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 3: TikTok Catalog (Open) -->
+                <details class="project-accordion" open>
+                    <summary class="accordion-header">
+                        <span class="accordion-title">TikTok Catalog Automator</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>Bulk publishing tool and catalog optimization engine mapping standard database fields to TikTok Shop requirements.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>Lead BA. Mapped strict category rules, product variants schema, and structured TikTok-compliant validation logs for warehouse admins.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Built an automated pre-validation system to detect missing parameters before sending API payloads, avoiding immediate shop bans.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Reduced item rejection rates from 18% down to 1.5%, increasing listing speeds by 300% for regional campaign launches.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 4: AI Sales Agent (Closed) -->
+                <details class="project-accordion">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">AI Sales Agent</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>Conversational LLM-powered product search assistant integrated directly into storefront pages to guide users through discovery.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>Product Owner & BA. Designed system prompt structures, response boundaries, and mapped integrations into search indexes.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Constrained output hallucinations by anchoring recommendations to structural product JSON catalogs rather than freeform LLM generation.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Automated 60% of search-to-cart discovery flows with positive customer satisfaction survey feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 5: Theme Section Builder (Closed) -->
+                <details class="project-accordion">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">Theme Section Builder</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>Visual editor interface enabling ecommerce marketers to dynamically assemble complex frontend layouts.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>BA & UX Architect. Conducted researcher interviews, drafted wireframes, and mapped output block configurations.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Resolved builder latency by defining a structured visual schema that outputs clean, static HTML/CSS files rather than loading heavy runtime templates.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Enabled non-technical marketing managers to deploy custom sales page layouts within 10 minutes without developer intervention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 6: AI Customer Service Chatbot (Closed) -->
+                <details class="project-accordion">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">AI Customer Service Chatbot</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>Help center bot capable of answering order status queries, returns questions, and shipping policies.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>Lead BA. Drafted workflow trees, integrated order tracking APIs, and outlined ticket escalation protocols.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Designed dynamic routing logic ensuring complex refund claims or system errors bypass the bot and land directly in high-priority Zendesk queues.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Reduced ticket volumes by 45% during peak seasonal traffic, saving support agent overhead significantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 7: AI Content Automation (Closed) -->
+                <details class="project-accordion">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">AI Content Automation</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>Overview</h4>
+                                <p>Enterprise copywriting pipeline generating SEO-optimized descriptions and blog headers at scale.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>My Role</h4>
+                                <p>Business Analyst. Managed prompt engineering constraints, keyword injection schemas, and validation workflows.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Analysis & Solution</h4>
+                                <p>Created a human-in-the-loop review interface allowing editors to check and refine AI drafts in 1-click before sync publishing.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Outcome</h4>
+                                <p>Reduced time-to-market for catalog descriptions by 70% while improving organic search index coverage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Project 8: Other Projects (Closed) -->
+                <details class="project-accordion">
+                    <summary class="accordion-header">
+                        <span class="accordion-title">Other Projects & Achievements</span>
+                        <span class="accordion-icon"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="project-details-grid">
+                            <div class="project-column">
+                                <h4>ERP Optimization</h4>
+                                <p>Consulted on inventory database migration to modern PostgreSQL structure, decreasing report runtimes by 22%.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Figma Wireframing</h4>
+                                <p>Built interactive high-fidelity wireframes for checkout page restructuring, increasing overall user conversion by 2.1%.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>UML & BPMN Mapping</h4>
+                                <p>Mapped 50+ process diagrams and flowcharts for standard operating procedures, aiding training automation programs.</p>
+                            </div>
+                            <div class="project-column">
+                                <h4>Agile Scrum Coaching</h4>
+                                <p>Facilitated daily standups, backlog grooming, and retrospective sessions for an 8-member engineering squad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
         </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bento-card card-skills">
+            <span class="mono-label">CAPABILITIES</span>
+            <h2>Professional Skillset</h2>
+            
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <h3>Business Analysis</h3>
+                    <ul class="skills-list">
+                        <li>Requirements Elicitation</li>
+                        <li>User Stories & Backlog Grooming</li>
+                        <li>UML & BPMN Process Mapping</li>
+                        <li>Agile / Scrum Framework</li>
+                        <li>Stakeholder Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-column">
+                    <h3>Technical</h3>
+                    <ul class="skills-list">
+                        <li>SQL Data Querying</li>
+                        <li>REST / GraphQL APIs</li>
+                        <li>JSON & Data Mapping</li>
+                        <li>Python (Pandas, Numpy)</li>
+                        <li>Git & Version Control</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-column">
+                    <h3>Tools</h3>
+                    <ul class="skills-list">
+                        <li>Jira & Confluence</li>
+                        <li>Figma (UX Wireframing)</li>
+                        <li>Draw.io / Lucidchart</li>
+                        <li>Tableau & PowerBI</li>
+                        <li>Microsoft Excel (Advanced)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bento-card card-contact">
+            <span class="mono-label">GET IN TOUCH</span>
+            <h2>Let's Collaborate</h2>
+            <p class="contact-desc">If you need a Business Analyst to design solutions, optimize processes, or document technical requirements, let's talk.</p>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <span class="mono-label">EMAIL</span>
+                    <p><a href="mailto:hodinhtrung.contact@gmail.com">hodinhtrung.contact@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <span class="mono-label">LOCATION</span>
+                    <p>Ho Chi Minh City, Vietnam</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <div class="footer-container">
+            <p>&copy; 2026 Ho Dinh Trung. All rights reserved. Designed under Premium Utilitarian Minimalism style.</p>
+        </div>
     </footer>
+
+    <!-- Smooth scroll helper / Nav highlighter -->
+    <script src="script.js"></script>
 </body>
 </html>
