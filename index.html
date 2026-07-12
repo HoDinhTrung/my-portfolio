@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,121 +12,256 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">H.D.T</a>
             <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#hero" class="active">
+                        <span data-lang="vi">Giới thiệu</span>
+                        <span data-lang="en">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience">
+                        <span data-lang="vi">Kinh nghiệm</span>
+                        <span data-lang="en">Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <span data-lang="vi">Dự án</span>
+                        <span data-lang="en">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills">
+                        <span data-lang="vi">Kỹ năng</span>
+                        <span data-lang="en">Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#education">
+                        <span data-lang="vi">Học vấn</span>
+                        <span data-lang="en">Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <span data-lang="vi">Liên hệ</span>
+                        <span data-lang="en">Contact</span>
+                    </a>
+                </li>
             </ul>
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" id="btn-vi">VI</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" id="btn-en">EN</button>
+            </div>
         </div>
     </nav>
 
     <main class="bento-container">
         
-        <!-- Hero Section -->
-        <section id="hero" class="bento-card hero-card">
-            <div class="hero-content">
-                <span class="mono-label">PORTFOLIO</span>
-                <h1 class="hero-name">Ho Dinh Trung</h1>
-                <p class="hero-title">Business Analyst</p>
-                <p class="hero-summary">
-                    I specialize in bridging the gap between complex business challenges and efficient technical architectures. With experience in Shopify integrations, TikTok Shop automation, and telemetry analytics, I design systems that translate requirements into measurable business outcomes.
-                </p>
-                <div class="hero-actions">
-                    <a href="#" class="btn-primary" download>Download CV</a>
-                    <a href="https://github.com/HoDinhTrung" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+        <!-- Hero Section (Dark Green Theme) -->
+        <section id="hero" class="bento-card hero-card dark-theme">
+            <div class="hero-layout">
+                <!-- Left: Text Info -->
+                <div class="hero-info">
+                    <span class="mono-label accent-label" data-lang="vi">HỒ SƠ NĂNG LỰC CÁ NHÂN</span>
+                    <span class="mono-label accent-label" data-lang="en">PROFESSIONAL PORTFOLIO</span>
+                    
+                    <h1 class="hero-name">Ho Dinh Trung</h1>
+                    
+                    <p class="hero-title" data-lang="vi">Chuyên viên Phân tích Nghiệp vụ (Business Analyst)</p>
+                    <p class="hero-title" data-lang="en">Business Analyst</p>
+                    
+                    <p class="hero-summary" data-lang="vi">
+                        Có nền tảng vững chắc về tích hợp hệ thống, phân tích API và định hình sản phẩm (product discovery), cùng kinh nghiệm làm việc trực tiếp với các bên liên quan, đánh giá các bài toán doanh nghiệp, đề xuất giải pháp kỹ thuật và đồng hành cùng quy trình phát triển từ giai đoạn khơi gợi yêu cầu cho đến kiểm thử UAT và phát hành sản phẩm.
+                    </p>
+                    <p class="hero-summary" data-lang="en">
+                        Strong background in system integration, API analysis and product discovery, with hands-on experience working directly with stakeholders, evaluating business problems, proposing technical solutions and supporting development from requirement elicitation through UAT and product release.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#" class="btn-primary" download>
+                            <span data-lang="vi">Tải CV (Bản Đẹp)</span>
+                            <span data-lang="en">Download CV</span>
+                        </a>
+                        <a href="https://github.com/HoDinhTrung" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
+                        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Avatar Frame -->
+                <div class="hero-avatar-area">
+                    <div class="avatar-frame">
+                        <div class="avatar-placeholder">
+                            <svg class="avatar-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 20C6 17.0002 9.00004 15 12 15C15 15 18 17.0002 18 20" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="avatar-text">H.D.T</span>
+                        </div>
+                    </div>
+                    <div class="avatar-badge">
+                        <span class="badge-dot"></span>
+                        <span data-lang="vi">Sẵn sàng làm việc</span>
+                        <span data-lang="en">Open to Work</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Bento Grid -->
+        <!-- Main Bento Grid (Experience & Education) -->
         <div class="bento-grid-2col">
             
-            <!-- Experience Card (2/3 width in desktop via grid config) -->
+            <!-- Experience Card (Left - White Theme) -->
             <section id="experience" class="bento-card card-experience">
-                <span class="mono-label">TIMELINE</span>
-                <h2>Professional Experience</h2>
+                <span class="mono-label" data-lang="vi">QUÁ TRÌNH LÀM VIỆC</span>
+                <span class="mono-label" data-lang="en">WORK TIMELINE</span>
+                
+                <h2 data-lang="vi">Kinh Nghiệm Thực Tế</h2>
+                <h2 data-lang="en">Professional Experience</h2>
                 
                 <div class="timeline">
+                    <!-- Item 1 -->
                     <div class="timeline-item">
                         <div class="timeline-meta">
-                            <span class="timeline-period">2024 — Present</span>
-                            <span class="timeline-company">E-Commerce Tech Solutions</span>
+                            <span class="timeline-period">11/2025 — Pres.</span>
+                            <span class="timeline-company" data-lang="vi">Giải pháp SaaS & TMĐT</span>
+                            <span class="timeline-company" data-lang="en">SaaS & E-commerce</span>
                         </div>
                         <div class="timeline-details">
-                            <h3 class="timeline-role">Lead Business Analyst</h3>
-                            <p>Directing technical requirements for inventory automation, multi-channel Shopify deployments, and TikTok Shop catalog synchronizations. Mapped and maintained complex REST/GraphQL API specifications between legacy ERP and public endpoints.</p>
+                            <h3 class="timeline-role" data-lang="vi">Business Analyst - SaaS & E-commerce Solutions</h3>
+                            <h3 class="timeline-role" data-lang="en">Business Analyst - SaaS & E-commerce Solutions</h3>
+                            
+                            <p data-lang="vi">Tham gia phân tích yêu cầu, nghiên cứu sản phẩm và thiết kế giải pháp cho các ứng dụng SaaS trong hệ sinh thái Shopify. Làm việc xuyên suốt từ Product Discovery, Requirement Analysis, Wireframe, API Research đến UAT và phát hành sản phẩm. Đồng thời phối hợp với Product Owner, Developer, QA và Marketing để phát triển sản phẩm và các hệ thống tích hợp phục vụ merchant thương mại điện tử.</p>
+                            <p data-lang="en">Participated in requirement analysis, product discovery, and solution design for SaaS applications within the Shopify ecosystem. Worked throughout the entire product lifecycle from Product Discovery, Requirement Analysis, Wireframing, and API Research to UAT and product release. Collaborated with Product Owners, Developers, QAs, and Marketing to build products and integrated systems for e-commerce merchants.</p>
                         </div>
                     </div>
 
+                    <!-- Item 2 -->
                     <div class="timeline-item">
                         <div class="timeline-meta">
-                            <span class="timeline-period">2022 — 2024</span>
-                            <span class="timeline-company">DataFlow Analytics Corp</span>
+                            <span class="timeline-period">02/2025 — 10/2025</span>
+                            <span class="timeline-company" data-lang="vi">Ngành Làm đẹp & Spa</span>
+                            <span class="timeline-company" data-lang="en">Spa & Beauty</span>
                         </div>
                         <div class="timeline-details">
-                            <h3 class="timeline-role">Junior Business Analyst / Data Specialist</h3>
-                            <p>Spearheaded system-requirement gathering for heatmaps and web-tracking telemetry software. Translated abstract client performance goals into database schemas, product backlog items, and dashboard mockups.</p>
+                            <h3 class="timeline-role" data-lang="vi">Business Analyst - Spa & Beauty Industry</h3>
+                            <h3 class="timeline-role" data-lang="en">Business Analyst - Spa & Beauty Industry</h3>
+                            
+                            <p data-lang="vi">Phân tích quy trình nghiệp vụ và triển khai các giải pháp tự động hóa dựa trên AI nhằm tối ưu vận hành và nâng cao trải nghiệm khách hàng. Tham gia thu thập yêu cầu, thiết kế luồng nghiệp vụ, nghiên cứu giải pháp tích hợp và UAT cho các dự án AI Content Automation, AI Customer Service Chatbot, Email Marketing Automation và các hệ thống tích hợp đa nền tảng.</p>
+                            <p data-lang="en">Analyzed business processes and deployed AI-driven automation solutions to optimize operations and enhance customer experience. Engaged in requirement elicitation, business flow design, integration research, and UAT for AI Content Automation, AI Customer Service Chatbot, Email Marketing Automation, and multi-platform integration projects.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Education & Languages Card (1/3 width) -->
-            <section id="education" class="bento-card card-education">
-                <span class="mono-label">ACADEMICS</span>
-                <h2>Education</h2>
+            <!-- Education & Languages Card (Right - Dark Green Theme) -->
+            <section id="education" class="bento-card card-education dark-theme">
+                <span class="mono-label" data-lang="vi">HỌC VẤN</span>
+                <span class="mono-label" data-lang="en">ACADEMICS</span>
+                
+                <h2 data-lang="vi">Đào Tạo & Chứng Chỉ</h2>
+                <h2 data-lang="en">Education & Credentials</h2>
                 
                 <div class="edu-item">
-                    <h3>Bachelor of Information Systems</h3>
-                    <p class="edu-school">University of Science</p>
-                    <p class="edu-year">Graduated 2023</p>
+                    <h3 data-lang="vi">Đại học Kinh tế Quốc dân (NEU)</h3>
+                    <h3 data-lang="en">National Economics University (NEU)</h3>
+                    
+                    <p class="edu-school" data-lang="vi">Trường Công nghệ</p>
+                    <p class="edu-school" data-lang="en">School of Technology</p>
+                    
+                    <p class="edu-year">2021 - 2026</p>
+                    
+                    <p class="edu-degree" data-lang="vi">Cử nhân Hệ thống Thông tin Quản lý - Bằng Xuất sắc</p>
+                    <p class="edu-degree" data-lang="en">Bachelor of Management Information Systems - High Distinction</p>
+                    
+                    <p class="edu-gpa">GPA: 3.64 / 4.0</p>
                 </div>
                 
                 <hr class="card-divider">
                 
-                <span class="mono-label">LANGUAGES</span>
+                <span class="mono-label" data-lang="vi">NGOẠI NGỮ</span>
+                <span class="mono-label" data-lang="en">LANGUAGES</span>
+                
                 <div class="language-score">
-                    <h3>TOEIC Certificate</h3>
-                    <p class="score-badge">850 / 990</p>
-                    <p class="score-desc">Professional Working Proficiency</p>
+                    <h3>English — TOEIC 990</h3>
+                    <p class="score-badge">990 <span class="score-max">/ 990</span></p>
+                    <p class="score-subdetails">730 L&R — 260 S&W</p>
                 </div>
             </section>
 
         </div>
 
-        <!-- Featured Projects (Full Width Bento Card) -->
+        <!-- Featured Projects (Full Width - White Theme) -->
         <section id="projects" class="bento-card card-projects">
-            <span class="mono-label">WORK DIRECTORY</span>
-            <h2>Featured Projects</h2>
+            <span class="mono-label" data-lang="vi">DANH MỤC DỰ ÁN DƯỚI DẠNG THẺ ACCORDION</span>
+            <span class="mono-label" data-lang="en">PROJECT DIRECTORY (ACCORDION GRID)</span>
+            
+            <h2 data-lang="vi">Dự Án Tiêu Biểu</h2>
+            <h2 data-lang="en">Featured Projects</h2>
             
             <div class="accordion-group">
                 
                 <!-- Project 1: Heatmap Analytics (Open) -->
                 <details class="project-accordion" open>
                     <summary class="accordion-header">
-                        <span class="accordion-title">Heatmap Analytics</span>
+                        <div class="header-left">
+                            <span class="accordion-title">Heatmap Analytics Platform</span>
+                            <span class="accordion-tag">Business Analyst | Shopify SaaS</span>
+                        </div>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>A custom click, hover, and scroll tracking system designed to collect, process, and map web visitor telemetry for conversion rate optimization.</p>
+                        <div class="accordion-inner-layout">
+                            <!-- Visual Asset Slot -->
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>Lead BA. Translated tracking needs into detailed event-driven data specifications, managed database schema design requirements, and wrote user stories.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Mitigated website load-time overhead caused by continuous event listeners by introducing buffered event queueing and compression logic on client scripts.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Implemented tracking with less than 15ms latency overhead, resulting in 98.4% data capturing efficiency while reducing server payload costs by 40%.</p>
+                            
+                            <!-- Detailed Text Info -->
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Ứng dụng phân tích hành vi người dùng trên Shopify thông qua Heatmap, Session Replay, Web Analytics và Funnel Analysis.</p>
+                                    <p data-lang="en">Shopify user behavior analytics app featuring Heatmap, Session Replay, Web Analytics, and Funnel Analysis.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Product Discovery</li>
+                                        <li>Market Research</li>
+                                        <li>Requirement Analysis</li>
+                                        <li>Wireframe</li>
+                                        <li>API Research</li>
+                                        <li>UAT</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Nghiên cứu thị trường, phân tích dữ liệu sử dụng và đề xuất roadmap phát triển. Thiết kế luồng nghiệp vụ, wireframe và cơ chế Event Tracking dựa trên Shopify API để đảm bảo giải pháp vừa đáp ứng nhu cầu merchant vừa khả thi về mặt kỹ thuật.</p>
+                                    <p data-lang="en">Market research, usage analysis, and roadmap formulation. Designed business flows, wireframes, and event tracking based on Shopify API to ensure both merchant satisfaction and technical feasibility.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">4 tính năng được phát hành</li>
+                                        <li data-lang="vi">Hỗ trợ merchant tối ưu chuyển đổi</li>
+                                        <li data-lang="vi">Hoàn thành đúng tiến độ</li>
+                                        
+                                        <li data-lang="en">4 features released</li>
+                                        <li data-lang="en">Enabled merchants to optimize conversions</li>
+                                        <li data-lang="en">Completed on schedule</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,26 +270,61 @@
                 <!-- Project 2: Shopify Integration (Open) -->
                 <details class="project-accordion" open>
                     <summary class="accordion-header">
-                        <span class="accordion-title">Shopify Integration Engine</span>
+                        <div class="header-left">
+                            <span class="accordion-title">Shopify Integration for Online Education</span>
+                            <span class="accordion-tag">Business Analyst | Shopify • System Integration</span>
+                        </div>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>Automated inventory and order flow synchronizer connecting on-premise ERP platforms with high-volume Shopify storefronts.</p>
+                        <div class="accordion-inner-layout">
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>Systems Analyst. Mapped API payloads, configured payload translation rules, and wrote specifications for transactional fallback mechanisms.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Addressed API rate-limit errors by engineering dynamic API call throttle controls based on headers, avoiding catalog sync delays.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Achieved near real-time catalog matching with a 99.9% sync success rate, preventing order cancellations due to database lag.</p>
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Xây dựng các giải pháp Shopify cho nền tảng giáo dục trực tuyến quốc tế nhằm tự động hóa quy trình bán ebook, quản lý chương trình khuyến mãi và tối ưu trải nghiệm mua hàng.</p>
+                                    <p data-lang="en">Developed Shopify solutions for an international online education platform to automate ebook sales, promotion management, and checkout optimization.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Requirement Gathering</li>
+                                        <li>Business Process Analysis</li>
+                                        <li>Solution Design</li>
+                                        <li>Wireframe</li>
+                                        <li>API Analysis</li>
+                                        <li>UAT</li>
+                                        <li>Client Demo</li>
+                                        <li>Documentation</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Làm việc trực tiếp với khách hàng để phân tích quy trình hiện tại, xác định các điểm cần cải thiện và đề xuất giải pháp phù hợp. Thiết kế wireframe và luồng nghiệp vụ cho các ứng dụng Shopify tùy chỉnh, đồng thời đánh giá khả năng tích hợp giữa Shopify, Edition Guard và Mailgun nhằm tự động hóa việc phân phối ebook, quản lý khuyến mãi và gửi email sau mua hàng.</p>
+                                    <p data-lang="en">Collaborated directly with clients to analyze current workflows, identify pain points, and propose optimal solutions. Designed wireframes and business flows for custom Shopify apps, evaluating integrations between Shopify, Edition Guard, and Mailgun to automate ebook distribution, promotions, and transactional emails.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">Triển khai thành công hệ thống tự động phân phối ebook và quản lý chương trình khuyến mãi trên Shopify.</li>
+                                        <li data-lang="vi">Giảm thao tác thủ công trong quy trình xử lý đơn hàng và gửi ebook.</li>
+                                        <li data-lang="vi">Hoàn thành UAT, demo khách hàng và bàn giao tài liệu hướng dẫn sử dụng.</li>
+                                        
+                                        <li data-lang="en">Successfully deployed automated ebook distribution and promotion management on Shopify.</li>
+                                        <li data-lang="en">Reduced manual tasks in order handling and ebook delivery.</li>
+                                        <li data-lang="en">Completed UAT, client demo, and user guide handover.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,166 +333,303 @@
                 <!-- Project 3: TikTok Catalog (Open) -->
                 <details class="project-accordion" open>
                     <summary class="accordion-header">
-                        <span class="accordion-title">TikTok Catalog Automator</span>
+                        <div class="header-left">
+                            <span class="accordion-title">TikTok Catalog Integration</span>
+                            <span class="accordion-tag">Business Analyst | Shopify • TikTok • System Integration</span>
+                        </div>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>Bulk publishing tool and catalog optimization engine mapping standard database fields to TikTok Shop requirements.</p>
+                        <div class="accordion-inner-layout">
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>Lead BA. Mapped strict category rules, product variants schema, and structured TikTok-compliant validation logs for warehouse admins.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Built an automated pre-validation system to detect missing parameters before sending API payloads, avoiding immediate shop bans.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Reduced item rejection rates from 18% down to 1.5%, increasing listing speeds by 300% for regional campaign launches.</p>
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Phát triển ứng dụng Shopify giúp merchant đồng bộ sản phẩm với TikTok Catalog và thiết lập hệ sinh thái TikTok for Business, bao gồm Business Center, Ad Account, Pixel và Catalog.</p>
+                                    <p data-lang="en">Developed Shopify app for catalog syncing and TikTok for Business ecosystem configuration (Business Center, Ad Account, Pixel, Catalog).</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Requirement Analysis</li>
+                                        <li>System Integration</li>
+                                        <li>API Research</li>
+                                        <li>Business Flow Design</li>
+                                        <li>Wireframe</li>
+                                        <li>UAT</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Nghiên cứu tài liệu hiện có và phân tích mối quan hệ giữa Shopify, TikTok Business Center, Ad Account, Pixel và Catalog để xây dựng luồng kết nối phù hợp cho nhiều kịch bản người dùng. Thiết kế logic mapping sản phẩm, đánh giá Shopify Bulk Operations và cơ chế đồng bộ tự động nhằm giảm API rate limit và đảm bảo hệ thống hoạt động ổn định khi xử lý dữ liệu lớn.</p>
+                                    <p data-lang="en">Analyzed TikTok API architecture to construct connection flows for varied user scenarios. Designed product mapping logic and evaluated Shopify Bulk Operations to mitigate API rate limits for high-volume data sync.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">Hoàn thành tính năng đồng bộ Catalog giữa Shopify và TikTok.</li>
+                                        <li data-lang="vi">Đơn giản hóa quy trình kết nối cho cả người dùng mới và người dùng hiện tại.</li>
+                                        <li data-lang="vi">Đảm bảo quá trình đồng bộ dữ liệu ổn định và đáp ứng yêu cầu mở rộng hệ thống.</li>
+                                        
+                                        <li data-lang="en">Completed catalog sync feature between Shopify and TikTok.</li>
+                                        <li data-lang="en">Simplified connection flows for new and existing users.</li>
+                                        <li data-lang="en">Ensured stable data sync and scalability.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </details>
 
-                <!-- Project 4: AI Sales Agent (Closed) -->
+                <!-- Project 4: AI Customer Service Chatbot (Closed) -->
                 <details class="project-accordion">
                     <summary class="accordion-header">
-                        <span class="accordion-title">AI Sales Agent</span>
+                        <div class="header-left">
+                            <span class="accordion-title">AI Customer Service Chatbot</span>
+                            <span class="accordion-tag">Business Analyst | AI • Omnichannel CS</span>
+                        </div>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>Conversational LLM-powered product search assistant integrated directly into storefront pages to guide users through discovery.</p>
+                        <div class="accordion-inner-layout">
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>Product Owner & BA. Designed system prompt structures, response boundaries, and mapped integrations into search indexes.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Constrained output hallucinations by anchoring recommendations to structural product JSON catalogs rather than freeform LLM generation.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Automated 60% of search-to-cart discovery flows with positive customer satisfaction survey feedback.</p>
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Xây dựng giải pháp AI Chatbot giúp doanh nghiệp tự động hóa hoạt động chăm sóc khách hàng trên nhiều kênh như Facebook Messenger, WhatsApp, Zalo và LINE, đồng thời giảm tải cho đội ngũ CSKH.</p>
+                                    <p data-lang="en">Built omnichannel AI chatbot to automate customer support across Facebook Messenger, WhatsApp, Zalo, and LINE, reducing support workload.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Requirement Gathering</li>
+                                        <li>Business Process Analysis</li>
+                                        <li>Conversation Flow Design</li>
+                                        <li>AI Knowledge Structure</li>
+                                        <li>System Integration</li>
+                                        <li>UAT</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Phân tích quy trình chăm sóc khách hàng hiện tại để xác định các tình huống có thể tự động hóa. Thiết kế luồng hội thoại, tổ chức cơ sở tri thức và phối hợp với Developer tích hợp Chatwoot cùng các nền tảng nhắn tin nhằm mang lại trải nghiệm hỗ trợ thống nhất trên nhiều kênh.</p>
+                                    <p data-lang="en">Analyzed customer support workflows to identify automation opportunities. Designed conversation flows, structured the AI knowledge base, and integrated Chatwoot API with messaging platforms for unified support.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">Hoàn thành giải pháp chatbot đa kênh phục vụ chăm sóc khách hàng.</li>
+                                        <li data-lang="vi">Chuẩn hóa quy trình xử lý các câu hỏi phổ biến.</li>
+                                        <li data-lang="vi">Hỗ trợ doanh nghiệp nâng cao hiệu quả phản hồi và giảm khối lượng công việc thủ công.</li>
+                                        
+                                        <li data-lang="en">Completed omnichannel chatbot solution for customer service.</li>
+                                        <li data-lang="en">Standardized workflow for common inquiries.</li>
+                                        <li data-lang="en">Helped businesses increase response efficiency and reduce manual support workload.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </details>
 
-                <!-- Project 5: Theme Section Builder (Closed) -->
+                <!-- Project 5: AI Content Automation (Closed) -->
                 <details class="project-accordion">
                     <summary class="accordion-header">
-                        <span class="accordion-title">Theme Section Builder</span>
+                        <div class="header-left">
+                            <span class="accordion-title">AI Content Automation</span>
+                            <span class="accordion-tag">Business Analyst | AI • Marketing Automation</span>
+                        </div>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>Visual editor interface enabling ecommerce marketers to dynamically assemble complex frontend layouts.</p>
+                        <div class="accordion-inner-layout">
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>BA & UX Architect. Conducted researcher interviews, drafted wireframes, and mapped output block configurations.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Resolved builder latency by defining a structured visual schema that outputs clean, static HTML/CSS files rather than loading heavy runtime templates.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Enabled non-technical marketing managers to deploy custom sales page layouts within 10 minutes without developer intervention.</p>
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Xây dựng quy trình tạo nội dung bằng AI nhằm tự động hóa việc sản xuất bài viết SEO đa ngôn ngữ, giúp đội ngũ Marketing tăng năng suất và giảm thời gian xử lý thủ công.</p>
+                                    <p data-lang="en">Created AI content generation pipeline to automate multilingual SEO article production, boosting marketing velocity.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Requirement Gathering</li>
+                                        <li>Business Process Analysis</li>
+                                        <li>Workflow Design</li>
+                                        <li>Prompt Optimization</li>
+                                        <li>UAT</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Phân tích quy trình sản xuất nội dung hiện tại và xác định các bước có thể tự động hóa. Thiết kế workflow tạo nội dung bằng AI, phối hợp với Developer triển khai quy trình tự động và liên tục đánh giá kết quả để tối ưu chất lượng nội dung cũng như Prompt.</p>
+                                    <p data-lang="en">Analyzed current marketing copy creation steps. Designed automated workflow pipelines powered by LLMs, collaborated with developers on integrations, and iteratively optimized prompts to improve context output.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">Tăng năng suất từ khoảng 1 bài viết mỗi 2 ngày lên khoảng 10 bài viết mỗi ngày.</li>
+                                        <li data-lang="vi">Hỗ trợ tạo nội dung cho 5 ngôn ngữ khác nhau.</li>
+                                        <li data-lang="vi">Chuẩn hóa quy trình sản xuất nội dung bằng AI cho đội ngũ Marketing.</li>
+                                        
+                                        <li data-lang="en">Increased output from ~1 article/2 days to ~10 articles/day.</li>
+                                        <li data-lang="en">Supports content generation for 5 different languages.</li>
+                                        <li data-lang="en">Standardized AI content production workflow for marketing teams.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </details>
 
-                <!-- Project 6: AI Customer Service Chatbot (Closed) -->
+                <!-- Project 6: AI Sales Agent (Closed) -->
                 <details class="project-accordion">
                     <summary class="accordion-header">
-                        <span class="accordion-title">AI Customer Service Chatbot</span>
+                        <div class="header-left">
+                            <span class="accordion-title">AI Sales Agent</span>
+                            <span class="accordion-tag">Business Analyst | AI • Shopify Product Discovery</span>
+                        </div>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>Help center bot capable of answering order status queries, returns questions, and shipping policies.</p>
+                        <div class="accordion-inner-layout">
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>Lead BA. Drafted workflow trees, integrated order tracking APIs, and outlined ticket escalation protocols.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Designed dynamic routing logic ensuring complex refund claims or system errors bypass the bot and land directly in high-priority Zendesk queues.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Reduced ticket volumes by 45% during peak seasonal traffic, saving support agent overhead significantly.</p>
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Xây dựng AI Sales Agent dành cho merchant Shopify với định hướng cung cấp một giải pháp bán hàng đơn giản, tập trung vào các tính năng cốt lõi và có chi phí thấp hơn các nền tảng AI Customer Service hiện có trên thị trường.</p>
+                                    <p data-lang="en">Developed Shopify AI Sales Agent focusing on core features and low-cost product discovery for dropshipping and POD merchants.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Product Discovery</li>
+                                        <li>Market Research</li>
+                                        <li>Competitor Analysis</li>
+                                        <li>Requirement Analysis</li>
+                                        <li>Wireframe</li>
+                                        <li>Feature Planning</li>
+                                        <li>UAT</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Nghiên cứu các giải pháp AI Customer Service trong lĩnh vực E-commerce và xác định nhóm merchant Dropshipping, POD không cần một hệ thống quá phức tạp mà ưu tiên tốc độ triển khai, chi phí hợp lý và khả năng hỗ trợ bán hàng. Kết hợp dữ liệu từ Heatmap và Session Replay để định hướng các tính năng phát hiện hành vi khách hàng, đồng thời thiết kế menu, wireframe và cấu trúc sản phẩm theo hướng tối giản, dễ sử dụng và hỗ trợ đội ngũ Marketing xây dựng thông điệp sản phẩm.</p>
+                                    <p data-lang="en">Analyzed e-commerce AI assistance tools, identifying POD/dropshipping merchants prioritize deployment speed and cost. Combined Heatmap/Replay insights to structure user intent detection, designing minimalist UI wireframes.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">Hoàn thành định hướng sản phẩm, wireframe và các tính năng cốt lõi cho AI Sales Agent.</li>
+                                        <li data-lang="vi">Xây dựng nền tảng cho khả năng phân tích hành vi khách hàng nhằm hỗ trợ tăng tỷ lệ chuyển đổi.</li>
+                                        <li data-lang="vi">Sản phẩm đang trong giai đoạn kiểm thử trước khi phát hành.</li>
+                                        
+                                        <li data-lang="en">Completed product direction, wireframes, and core features.</li>
+                                        <li data-lang="en">Laid foundation for customer behavior analytics to boost conversions.</li>
+                                        <li data-lang="en">Product currently in testing phase prior to release.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </details>
 
-                <!-- Project 7: AI Content Automation (Closed) -->
+                <!-- Project 7: Shopify Theme Section Builder (Closed) -->
                 <details class="project-accordion">
                     <summary class="accordion-header">
-                        <span class="accordion-title">AI Content Automation</span>
-                        <span class="accordion-icon"></span>
-                    </summary>
-                    <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>Overview</h4>
-                                <p>Enterprise copywriting pipeline generating SEO-optimized descriptions and blog headers at scale.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>My Role</h4>
-                                <p>Business Analyst. Managed prompt engineering constraints, keyword injection schemas, and validation workflows.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Analysis & Solution</h4>
-                                <p>Created a human-in-the-loop review interface allowing editors to check and refine AI drafts in 1-click before sync publishing.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Outcome</h4>
-                                <p>Reduced time-to-market for catalog descriptions by 70% while improving organic search index coverage.</p>
-                            </div>
+                        <div class="header-left">
+                            <span class="accordion-title">Shopify Theme Section Builder</span>
+                            <span class="accordion-tag">Business Analyst | Shopify • Product Strategy</span>
                         </div>
-                    </div>
-                </details>
-
-                <!-- Project 8: Other Projects (Closed) -->
-                <details class="project-accordion">
-                    <summary class="accordion-header">
-                        <span class="accordion-title">Other Projects & Achievements</span>
                         <span class="accordion-icon"></span>
                     </summary>
                     <div class="accordion-content">
-                        <div class="project-details-grid">
-                            <div class="project-column">
-                                <h4>ERP Optimization</h4>
-                                <p>Consulted on inventory database migration to modern PostgreSQL structure, decreasing report runtimes by 22%.</p>
+                        <div class="accordion-inner-layout">
+                            <div class="project-media">
+                                <div class="media-placeholder">
+                                    <span class="media-icon">📷</span>
+                                    <span class="media-label" data-lang="vi">Ảnh dự án (Sẽ cập nhật sau)</span>
+                                    <span class="media-label" data-lang="en">Project Image (To be updated)</span>
+                                </div>
                             </div>
-                            <div class="project-column">
-                                <h4>Figma Wireframing</h4>
-                                <p>Built interactive high-fidelity wireframes for checkout page restructuring, increasing overall user conversion by 2.1%.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>UML & BPMN Mapping</h4>
-                                <p>Mapped 50+ process diagrams and flowcharts for standard operating procedures, aiding training automation programs.</p>
-                            </div>
-                            <div class="project-column">
-                                <h4>Agile Scrum Coaching</h4>
-                                <p>Facilitated daily standups, backlog grooming, and retrospective sessions for an 8-member engineering squad.</p>
+                            <div class="project-details-grid">
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Tổng quan</h4>
+                                    <h4 data-lang="en">Overview</h4>
+                                    <p data-lang="vi">Phát triển nền tảng cung cấp các Shopify Theme Sections giúp merchant dễ dàng mở rộng giao diện cửa hàng mà không cần chỉnh sửa mã nguồn.</p>
+                                    <p data-lang="en">Developed Shopify Theme Sections platform allowing merchants to customize store design without editing code.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Vai trò của tôi</h4>
+                                    <h4 data-lang="en">My Role</h4>
+                                    <ul class="detail-list">
+                                        <li>Market Research</li>
+                                        <li>Competitor Analysis</li>
+                                        <li>Feature Planning</li>
+                                        <li>UX Research</li>
+                                        <li>Wireframe</li>
+                                        <li>UAT</li>
+                                    </ul>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Phân tích & Giải pháp</h4>
+                                    <h4 data-lang="en">Analysis & Solution</h4>
+                                    <p data-lang="vi">Phân tích các ứng dụng Theme Section trên Shopify App Store để xác định những tính năng cần ưu tiên và xây dựng lộ trình phát triển phù hợp. Thiết kế trải nghiệm người dùng cho việc khám phá, mua, cài đặt và quản lý Theme Sections, đồng thời đề xuất giải pháp Bundle và quản lý các Section đã mua nhằm đơn giản hóa trải nghiệm của merchant.</p>
+                                    <p data-lang="en">Analyzed app store competitors to sequence the feature backlog. Designed UX flow for purchasing, installing, and managing theme modules, proposing bundling strategies for merchants.</p>
+                                </div>
+                                <div class="project-column">
+                                    <h4 data-lang="vi">Kết quả</h4>
+                                    <h4 data-lang="en">Outcome</h4>
+                                    <ul class="outcome-list">
+                                        <li data-lang="vi">Hoàn thành thiết kế trải nghiệm và lộ trình phát triển cho Theme Section Builder.</li>
+                                        <li data-lang="vi">Đề xuất chiến lược phát triển theo từng phiên bản dựa trên nghiên cứu thị trường.</li>
+                                        <li data-lang="vi">Đặt nền tảng cho khả năng tích hợp với Heatmap và AI Sales Agent nhằm hỗ trợ tối ưu giao diện cửa hàng dựa trên dữ liệu hành vi người dùng.</li>
+                                        
+                                        <li data-lang="en">Completed UX design and product roadmap.</li>
+                                        <li data-lang="en">Proposed phased development strategy based on market research.</li>
+                                        <li data-lang="en">Laid foundation for integrations with Heatmap and AI Sales Agent to optimize layouts using behavioral data.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -331,60 +638,88 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="bento-card card-skills">
-            <span class="mono-label">CAPABILITIES</span>
-            <h2>Professional Skillset</h2>
+        <!-- Skills Section (Dark Green Theme) -->
+        <section id="skills" class="bento-card card-skills dark-theme">
+            <span class="mono-label accent-label" data-lang="vi">NĂNG LỰC CHUYÊN MÔN</span>
+            <span class="mono-label accent-label" data-lang="en">CAPABILITIES</span>
+            
+            <h2 data-lang="vi">Kỹ Năng Đa Chiều</h2>
+            <h2 data-lang="en">Professional Skillset</h2>
             
             <div class="skills-grid">
+                <!-- Business Skills -->
                 <div class="skills-column">
-                    <h3>Business Analysis</h3>
+                    <h3 data-lang="vi">Nghiệp Vụ Doanh Nghiệp</h3>
+                    <h3 data-lang="en">Business Skills</h3>
                     <ul class="skills-list">
-                        <li>Requirements Elicitation</li>
-                        <li>User Stories & Backlog Grooming</li>
-                        <li>UML & BPMN Process Mapping</li>
-                        <li>Agile / Scrum Framework</li>
+                        <li>Requirement Gathering & Analysis</li>
+                        <li>Business Process Modeling</li>
+                        <li>BRD & SRS document</li>
+                        <li>User Story & Use Case</li>
+                        <li>UAT Testing</li>
+                        <li>Backlog Management</li>
+                        <li>Product Discovery & Roadmap Planning</li>
                         <li>Stakeholder Management</li>
                     </ul>
                 </div>
                 
+                <!-- Technical Skills -->
                 <div class="skills-column">
-                    <h3>Technical</h3>
+                    <h3 data-lang="vi">Kỹ Thuật Hệ Thống</h3>
+                    <h3 data-lang="en">Technical Skills</h3>
                     <ul class="skills-list">
-                        <li>SQL Data Querying</li>
-                        <li>REST / GraphQL APIs</li>
-                        <li>JSON & Data Mapping</li>
-                        <li>Python (Pandas, Numpy)</li>
-                        <li>Git & Version Control</li>
+                        <li>UML Diagram</li>
+                        <li>Draw.io</li>
+                        <li>API Analysis</li>
+                        <li>SQL</li>
+                        <li>Jira, Confluence, Google Doc/ Sheet</li>
+                        <li>Figma for Wireframe, Mockup</li>
                     </ul>
                 </div>
                 
+                <!-- Soft Skills -->
                 <div class="skills-column">
-                    <h3>Tools</h3>
+                    <h3 data-lang="vi">Kỹ Năng Mềm</h3>
+                    <h3 data-lang="en">Soft Skills</h3>
                     <ul class="skills-list">
-                        <li>Jira & Confluence</li>
-                        <li>Figma (UX Wireframing)</li>
-                        <li>Draw.io / Lucidchart</li>
-                        <li>Tableau & PowerBI</li>
-                        <li>Microsoft Excel (Advanced)</li>
+                        <li data-lang="vi">Giao tiếp & Tương tác</li>
+                        <li data-lang="en">Communication</li>
+                        
+                        <li data-lang="vi">Tư duy phân tích</li>
+                        <li data-lang="en">Analytical Thinking</li>
+                        
+                        <li data-lang="vi">Giải quyết vấn đề</li>
+                        <li data-lang="en">Problem Solving</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="bento-card card-contact">
-            <span class="mono-label">GET IN TOUCH</span>
-            <h2>Let's Collaborate</h2>
-            <p class="contact-desc">If you need a Business Analyst to design solutions, optimize processes, or document technical requirements, let's talk.</p>
+        <!-- Contact Section (Dark Green Theme) -->
+        <section id="contact" class="bento-card card-contact dark-theme">
+            <span class="mono-label accent-label" data-lang="vi">THÔNG TIN KẾT NỐI</span>
+            <span class="mono-label accent-label" data-lang="en">GET IN TOUCH</span>
+            
+            <h2 data-lang="vi">Cùng Hợp Tác Xây Dựng Sản Phẩm</h2>
+            <h2 data-lang="en">Let's Collaborate</h2>
+            
+            <p class="contact-desc" data-lang="vi">Nếu bạn đang cần một Business Analyst chuyên nghiệp để tư vấn giải pháp kỹ thuật, phân tích luồng nghiệp vụ hoặc tối ưu hóa sản phẩm số, hãy kết nối với tôi.</p>
+            <p class="contact-desc" data-lang="en">If you need a professional Business Analyst to design systems, gather technical specifications, or optimize digital products, let's talk.</p>
+            
             <div class="contact-methods">
                 <div class="contact-item">
                     <span class="mono-label">EMAIL</span>
-                    <p><a href="mailto:hodinhtrung.contact@gmail.com">hodinhtrung.contact@gmail.com</a></p>
+                    <p><a href="mailto:hodinhtrung20012003@gmail.com">hodinhtrung20012003@gmail.com</a></p>
                 </div>
                 <div class="contact-item">
-                    <span class="mono-label">LOCATION</span>
-                    <p>Ho Chi Minh City, Vietnam</p>
+                    <span class="mono-label" data-lang="vi">THÔNG TIN CHI TIẾT</span>
+                    <span class="mono-label" data-lang="en">PERSONAL DETAILS</span>
+                    
+                    <p class="personal-info-line" data-lang="vi">Sinh năm: 2003</p>
+                    <p class="personal-info-line" data-lang="en">YOB: 2003</p>
+                    
+                    <p class="personal-info-line" data-lang="vi">Địa chỉ: Hoàng Mai, Hà Nội</p>
+                    <p class="personal-info-line" data-lang="en">Location: Hoang Mai, Hanoi</p>
                 </div>
             </div>
         </section>
@@ -393,11 +728,12 @@
 
     <footer>
         <div class="footer-container">
-            <p>&copy; 2026 Ho Dinh Trung. All rights reserved. Designed under Premium Utilitarian Minimalism style.</p>
+            <p data-lang="vi">&copy; 2026 Ho Dinh Trung. Mọi quyền được bảo lưu. Phong cách thiết kế Bento tối giản.</p>
+            <p data-lang="en">&copy; 2026 Ho Dinh Trung. All rights reserved. Built with Premium Utilitarian Minimalism.</p>
         </div>
     </footer>
 
-    <!-- Smooth scroll helper / Nav highlighter -->
+    <!-- Smooth scroll helper / Nav highlighter / Bilingual logic -->
     <script src="script.js"></script>
 </body>
 </html>
