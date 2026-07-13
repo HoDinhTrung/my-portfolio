@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 /* ==========================================================================
    Premium Utilitarian Minimalism Style Guide
    Bento Grid Portfolio - Forest Green, Sage Canvas & Antique Gold
@@ -30,7 +32,7 @@
     --dark-border-hover: rgba(229, 195, 132, 0.35);
     
     --font-serif: 'Times New Roman', Times, Georgia, serif;
-    --font-mono: 'Courier New', Courier, monospace;
+    --font-mono: 'Outfit', sans-serif; /* High-end sans-serif instead of monospace for label contrast */
 }
 
 /* Language Toggling Core Mechanics */
@@ -294,10 +296,7 @@ a {
 }
 
 .hero-layout {
-    display: grid;
-    grid-template-columns: 1.8fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    display: block;
 }
 
 .hero-name {
@@ -785,7 +784,7 @@ a {
 /* Project Text Grid */
 .project-details-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -922,56 +921,69 @@ a {
    10. Contact Section (Dark Green Card)
    -------------------------------------------------- */
 .card-contact {
+    display: block;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 3.5rem;
+    width: 100%;
+}
+
+.contact-main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.contact-desc {
-    font-size: 1.2rem;
-    color: #3F4441;
-    max-width: 55ch;
-    margin-bottom: 2.5rem;
-}
-
-.dark-theme .contact-desc {
-    color: var(--dark-text-muted);
-}
-
-.contact-methods {
+.contact-sidebar {
+    border-left: 1px solid var(--dark-border);
+    padding-left: 3rem;
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    gap: 1.75rem;
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+.contact-links-grid {
+    display: flex;
+    gap: 3rem;
     width: 100%;
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 2.25rem;
+    border-top: 1px solid var(--dark-border);
+    padding-top: 2rem;
+    margin-top: 1.5rem;
 }
 
-.dark-theme .contact-methods {
-    border-top-color: var(--dark-border);
-}
-
-.contact-item p {
-    font-size: 1.35rem;
+.contact-link-item p {
+    font-size: 1.25rem;
     margin-top: 0.35rem;
 }
 
-.contact-item a:hover {
-    color: var(--color-accent);
+.contact-link-item a:hover {
+    color: var(--dark-gold);
     text-decoration: underline;
 }
 
-.dark-theme .contact-item a:hover {
-    color: var(--dark-gold);
+.personal-detail-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
-.personal-info-line {
-    font-size: 1.05rem;
-    color: #3F4441;
-    margin-top: 0.25rem;
+.personal-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--dark-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.dark-theme .personal-info-line {
-    color: #E0E6E3;
+.personal-value {
+    font-size: 1.15rem;
+    font-family: var(--font-serif);
+    color: var(--dark-text);
 }
 
 /* --------------------------------------------------
@@ -1028,13 +1040,15 @@ footer {
     }
     
     .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
         text-align: center;
     }
     
     .hero-actions {
         justify-content: center;
+    }
+    
+    .project-details-grid {
+        grid-template-columns: 1fr;
     }
     
     .timeline-item {
@@ -1067,9 +1081,23 @@ footer {
         gap: 1.75rem;
     }
     
-    .contact-methods {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .contact-sidebar {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid var(--dark-border);
+        padding-top: 2rem;
+        width: 100%;
+        gap: 1.25rem;
+    }
+    
+    .contact-links-grid {
         flex-direction: column;
-        gap: 1.75rem;
+        gap: 1.5rem;
     }
     
     .bento-card {

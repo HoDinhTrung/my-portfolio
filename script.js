@@ -115,15 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =================================-----------------
-    // 4. Advanced Smooth Scaling Reveal Animations
+    // 4. Scroll Parallax & Entrance Animations
     // =================================-----------------
     const cards = document.querySelectorAll('.bento-card');
     
     const revealCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0) scale(1)';
+                entry.target.classList.add('visible');
                 observer.unobserve(entry.target); // Trigger only once
             }
         });
@@ -131,19 +130,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const revealObserver = new IntersectionObserver(revealCallback, {
         root: null,
-        threshold: 0.05,
-        rootMargin: '0px 0px -80px 0px' // Reveal slightly before card hits viewport
+        threshold: 0.02,
+        rootMargin: '0px 0px -60px 0px'
     });
 
     cards.forEach((card, index) => {
-        // Initial states: shifted down and slightly scaled down for premium feel
+        // Initial setup for reveal
         card.style.opacity = '0';
         card.style.transform = 'translateY(40px) scale(0.97)';
-        
-        // Custom elegant cubic-bezier for spring-like weight entry
-        card.style.transition = 'opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1)';
-        card.style.transitionDelay = `${index * 90}ms`; // Dynamic staggered delays
+        card.style.transition = 'opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1)';
+        card.style.transitionDelay = `${index * 80}ms`;
         
         revealObserver.observe(card);
+    });
+
+    // Subtle scroll-driven parallax movement
+    const handleScrollParallax = () => {
+        const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        const viewportHeight = window.innerHeight;
+        
+        cards.forEach((card, index) => {
+            if (card.classList.contains('visible')) {
+                const rect = card.getBoundingClientRect();
+                const cardTop = rect.top + scrolled;
+                const cardHeight = rect.height;
+                
+                // Calculate the card center relative to scroll position
+                const cardCenter = cardTop + cardHeight / 2;
+                const viewportCenter = scrolled + viewportHeight / 2;
+                
+                // Distance from viewport center
+                const distance = cardCenter - viewportCenter;
+                
+                // Alternate moving direction for alternate cards to create depth
+                const factor = (index % 2 === 0) ? 0.025 : -0.025;
+                const translateY = distance * factor;
+                
+                // Apply transition for scroll rendering to avoid visual jumps
+                card.style.transition = 'transform 0.15s ease-out, opacity 1s cubic-bezier(0.16, 1, 0.3, 1)';
+                card.style.transitionDelay = '0ms'; // Clear delay once visible
+                card.style.transform = `translateY(${translateY}px) scale(1)`;
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        window.requestAnimationFrame(handleScrollParallax);
     });
 });
