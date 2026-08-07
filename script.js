@@ -1,3 +1,32 @@
+// Global Tab Switching Function (accessible immediately)
+window.switchTab = function(btnElement, targetTab) {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Toggle active buttons
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    if (btnElement) {
+        btnElement.classList.add('active');
+    } else {
+        const activeBtn = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
+        if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Toggle active content areas with !important inline display
+    tabContents.forEach(content => {
+        if (content.id === `tab-${targetTab}`) {
+            content.classList.add('active');
+            content.style.setProperty('display', 'block', 'important');
+        } else {
+            content.classList.remove('active');
+            content.style.setProperty('display', 'none', 'important');
+        }
+    });
+
+    // Dispatch resize event to trigger layout refresh
+    window.dispatchEvent(new Event('resize'));
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // =================================-----------------
     // 1. Bilingual Language Switcher Logic
@@ -180,40 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =================================-----------------
-    // 5. Project Tab Switching Logic
+    // 5. Project Tab Switching Event Listeners
     // =================================-----------------
-    window.switchTab = function(btnElement, targetTab) {
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-
-        // Toggle active buttons
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        if (btnElement) {
-            btnElement.classList.add('active');
-        } else {
-            const activeBtn = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
-            if (activeBtn) activeBtn.classList.add('active');
-        }
-
-        // Toggle active content areas
-        tabContents.forEach(content => {
-            if (content.id === `tab-${targetTab}`) {
-                content.classList.add('active');
-                content.style.display = 'block';
-            } else {
-                content.classList.remove('active');
-                content.style.display = 'none';
-            }
-        });
-
-        // Re-trigger scroll parallax to update item coordinates in active tab
-        setTimeout(() => {
-            if (typeof handleScrollParallax === 'function') {
-                window.requestAnimationFrame(handleScrollParallax);
-            }
-        }, 50);
-    };
-
     const tabButtons = document.querySelectorAll('.tab-btn');
     tabButtons.forEach(button => {
         button.addEventListener('click', (e) => {

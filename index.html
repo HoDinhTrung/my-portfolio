@@ -186,13 +186,43 @@
             <h2 data-lang="vi">Dự Án Tiêu Biểu</h2>
             <h2 data-lang="en">Featured Projects</h2>
             
+            <!-- Inline Tab Switcher Logic (Guarantees immediate execution regardless of caching) -->
+            <script>
+                function switchTab(btnElement, targetTab) {
+                    var tabButtons = document.querySelectorAll('.tab-btn');
+                    var tabContents = document.querySelectorAll('.tab-content');
+
+                    tabButtons.forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+                    if (btnElement) {
+                        btnElement.classList.add('active');
+                    } else {
+                        var activeBtn = document.querySelector('.tab-btn[data-tab="' + targetTab + '"]');
+                        if (activeBtn) activeBtn.classList.add('active');
+                    }
+
+                    tabContents.forEach(function(content) {
+                        if (content.id === 'tab-' + targetTab) {
+                            content.classList.add('active');
+                            content.style.setProperty('display', 'block', 'important');
+                        } else {
+                            content.classList.remove('active');
+                            content.style.setProperty('display', 'none', 'important');
+                        }
+                    });
+
+                    window.dispatchEvent(new Event('resize'));
+                }
+            </script>
+
             <!-- Project Tabs -->
             <div class="project-tabs">
-                <button class="tab-btn active" data-tab="product" onclick="switchTab(this, 'product')">
+                <button class="tab-btn active" type="button" data-tab="product" onclick="switchTab(this, 'product')">
                     <span data-lang="vi">Sản phẩm</span>
                     <span data-lang="en">Product</span>
                 </button>
-                <button class="tab-btn" data-tab="outsource" onclick="switchTab(this, 'outsource')">
+                <button class="tab-btn" type="button" data-tab="outsource" onclick="switchTab(this, 'outsource')">
                     <span data-lang="vi">Dự án Outsource</span>
                     <span data-lang="en">Outsource</span>
                 </button>
