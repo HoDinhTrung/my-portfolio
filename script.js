@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                entry.target.style.opacity = '1';
                 observer.unobserve(entry.target); // Trigger only once
             }
         });

@@ -647,6 +647,8 @@ a {
     border-bottom: 1px solid var(--border-subtle);
     margin-bottom: 2rem;
     margin-top: 1.5rem;
+    position: relative;
+    z-index: 10;
 }
 
 .tab-btn {
