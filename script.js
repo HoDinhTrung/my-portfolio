@@ -182,30 +182,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // =================================-----------------
     // 5. Project Tab Switching Logic
     // =================================-----------------
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
+    window.switchTab = function(btnElement, targetTab) {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const targetTab = button.getAttribute('data-tab');
+        // Toggle active buttons
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        if (btnElement) {
+            btnElement.classList.add('active');
+        } else {
+            const activeBtn = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
+            if (activeBtn) activeBtn.classList.add('active');
+        }
 
-            // Toggle active buttons
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+        // Toggle active content areas
+        tabContents.forEach(content => {
+            if (content.id === `tab-${targetTab}`) {
+                content.classList.add('active');
+                content.style.display = 'block';
+            } else {
+                content.classList.remove('active');
+                content.style.display = 'none';
+            }
+        });
 
-            // Toggle active content areas
-            tabContents.forEach(content => {
-                if (content.id === `tab-${targetTab}`) {
-                    content.classList.add('active');
-                } else {
-                    content.classList.remove('active');
-                }
-            });
-
-            // Re-trigger scroll parallax to update item coordinates in active tab
-            setTimeout(() => {
+        // Re-trigger scroll parallax to update item coordinates in active tab
+        setTimeout(() => {
+            if (typeof handleScrollParallax === 'function') {
                 window.requestAnimationFrame(handleScrollParallax);
-            }, 50);
+            }
+        }, 50);
+    };
+
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetTab = button.getAttribute('data-tab');
+            window.switchTab(button, targetTab);
         });
     });
 });

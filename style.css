@@ -666,6 +666,10 @@ a {
     letter-spacing: 0.05em;
 }
 
+.tab-btn span {
+    pointer-events: none;
+}
+
 .tab-btn:hover {
     color: var(--color-accent);
 }
