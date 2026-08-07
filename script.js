@@ -177,4 +177,34 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         window.requestAnimationFrame(handleScrollParallax);
     });
+
+    // =================================-----------------
+    // 5. Project Tab Switching Logic
+    // =================================-----------------
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+
+            // Toggle active buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Toggle active content areas
+            tabContents.forEach(content => {
+                if (content.id === `tab-${targetTab}`) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+
+            // Re-trigger scroll parallax to update item coordinates in active tab
+            setTimeout(() => {
+                window.requestAnimationFrame(handleScrollParallax);
+            }, 50);
+        });
+    });
 });
