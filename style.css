@@ -1231,13 +1231,13 @@ footer {
    -------------------------------------------------- */
 .ai-widget {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    height: 48px;
-    width: 48px;
-    background: rgba(12, 43, 29, 0.92);
-    border: 1px solid rgba(229, 195, 132, 0.45);
-    border-radius: 24px;
+    top: 7.5rem;
+    right: 2.5rem;
+    height: 72px;
+    width: 72px;
+    background: rgba(12, 43, 29, 0.95);
+    border: 2px solid rgba(229, 195, 132, 0.6);
+    border-radius: 36px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1245,44 +1245,44 @@ footer {
     color: var(--dark-gold);
     text-decoration: none;
     z-index: 9999;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 10px rgba(229, 195, 132, 0.15);
-    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s, transform 0.3s, border-color 0.3s;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45), 0 0 22px rgba(229, 195, 132, 0.35), inset 0 0 10px rgba(229, 195, 132, 0.2);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s, transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     cursor: pointer;
-    padding-left: 13px;
+    padding-left: 18px;
 }
 
 .ai-widget:hover {
-    width: 190px;
+    width: 250px;
     background: #071f14;
-    transform: translateY(-4px);
+    transform: scale(1.05);
     border-color: var(--dark-gold);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 18px rgba(229, 195, 132, 0.4);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 35px rgba(229, 195, 132, 0.75), inset 0 0 15px rgba(229, 195, 132, 0.3);
 }
 
 .ai-widget-icon {
-    min-width: 20px;
-    height: 20px;
+    min-width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--dark-gold);
-    animation: aiPulse 2.2s infinite ease-in-out;
+    animation: aiPulse 2s infinite ease-in-out;
 }
 
 .ai-widget-text {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.92rem;
     font-weight: 700;
     color: var(--dark-text);
-    margin-left: 12px;
+    margin-left: 15px;
     white-space: nowrap;
     opacity: 0;
-    transform: translateX(12px);
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(15px);
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     display: none;
 }
 
@@ -1303,28 +1303,34 @@ html[lang="en"] .ai-widget:hover .ai-widget-text[data-lang="en"] {
 @keyframes aiPulse {
     0%, 100% {
         transform: scale(1);
-        filter: drop-shadow(0 0 2px rgba(229, 195, 132, 0.4));
+        filter: drop-shadow(0 0 3px rgba(229, 195, 132, 0.5));
     }
     50% {
-        transform: scale(1.18);
-        filter: drop-shadow(0 0 8px rgba(229, 195, 132, 0.85));
+        transform: scale(1.22);
+        filter: drop-shadow(0 0 12px rgba(229, 195, 132, 0.95));
     }
 }
 
 @media (max-width: 768px) {
     .ai-widget {
-        bottom: 1.5rem;
+        top: 6rem;
         right: 1.5rem;
-        height: 44px;
-        width: 44px;
-        border-radius: 22px;
-        padding-left: 11px;
+        height: 56px;
+        width: 56px;
+        border-radius: 28px;
+        padding-left: 12px;
+        border-width: 1.5px;
+    }
+
+    .ai-widget-icon {
+        min-width: 28px;
+        height: 28px;
     }
     
     .ai-widget:hover {
-        width: 44px; /* Disable text expansion on small mobile screens to keep layout clean */
+        width: 56px;
         transform: none;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     }
 
     .ai-widget:hover .ai-widget-text {
